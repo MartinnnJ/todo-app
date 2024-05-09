@@ -1,0 +1,23 @@
+.btn {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+@media (min-width: 600px) {
+
+  .input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  input.form-control-lg {
+    flex: 1;
+  }
+
+  .btn-lg {
+    width: 25%;
+  }
+
+}

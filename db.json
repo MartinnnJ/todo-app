@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "26469143506332804",
+      "text": "Learn Angular and RxJS!",
+      "isComplete": false
+    },
+    {
+      "id": "8905681823344123",
+      "text": "Learn and practice React!",
+      "isComplete": false
+    },
+    {
+      "id": "04422112402359879",
+      "text": "TypeScript is better choice then Vanilla JavaScript",
+      "isComplete": true
+    },
+    {
+      "id": "5603628642235279",
+      "text": "Go to Lidl and buy there some milk",
+      "isComplete": true
+    }
+  ]
+}

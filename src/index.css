@@ -1,0 +1,39 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+.invalid {
+  border-color: red;
+}
+
+input.invalid:focus {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem rgba(209, 5, 5, 0.25);
+}

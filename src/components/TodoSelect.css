@@ -1,0 +1,7 @@
+@media (min-width: 600px) {
+
+  select.form-select {
+    width: 250px;
+  }
+
+}
