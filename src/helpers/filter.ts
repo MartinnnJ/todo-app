@@ -1,4 +1,4 @@
-import Todo from "@/models/Todo";
+import Todo from "@models/Todo";
 
 export const filterOptions = [
   (todo: Todo) => todo,

@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import { maxTodoTextLength, minTodoTextLength } from "@/helpers/http";
+import { maxTodoTextLength, minTodoTextLength } from "@helpers/http";
 import "./TodoInput.css";
 
 type T = {
@@ -33,7 +33,10 @@ const TodoInput: React.FC<T> = ({ onFormSubmit }) => {
   }
 
   return (
-    <form className="input-form" onSubmit={formSubmitHandler}>
+    <form
+      className="input-form"
+      onSubmit={formSubmitHandler}
+    >
       <input
         type="text"
         className={inputInvalidStyles}

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import { maxTodoTextLength, minTodoTextLength } from "@helpers/http";
 import "./TodoItem.css";
-import { maxTodoTextLength, minTodoTextLength } from "@/helpers/http";
 
 type T = {
   onTextUpdate: (id: string, newText: string) => void,

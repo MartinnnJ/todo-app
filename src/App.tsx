@@ -3,9 +3,10 @@ import TodoInput from "@components/TodoInput";
 import TodoSelect from "@components/TodoSelect";
 import TodoItem from "@components/TodoItem";
 import ErrorMessage from "@components/ErrorMessage";
-import { createTodo, deleteTodo, fetchTodos, updateTodo } from "./helpers/http";
-import { filterOptions } from "./helpers/filter";
-import Todo from "./models/Todo";
+import Todo from "@models/Todo";
+import { createTodo, deleteTodo, fetchTodos, updateTodo } from "@helpers/http";
+import { filterOptions } from "@helpers/filter";
+import { updateTodos } from "@helpers/update-todos";
 
 export default function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -74,13 +75,8 @@ export default function App() {
       if (response.status !== 200) {
         throw new Error('Unable to update todo!');
       }
-      // TODO: refactor on single state update fn !!! + refactor imports + one error handler fn
       setTodos(prevTodos => {
-        const updatedTodo = response.data;
-        const todoIndex = prevTodos.findIndex(todo => todo.id === updatedTodo.id);
-        const prevTodosCopy = [...prevTodos];
-        prevTodosCopy.splice(todoIndex, 1, updatedTodo);
-        return prevTodosCopy;
+        return updateTodos(prevTodos, response.data);
       });
     } catch (err) {
       setTodos([]);
@@ -99,13 +95,8 @@ export default function App() {
       if (response.status !== 200) {
         throw new Error('Unable to update todo!');
       }
-      // TODO: refactor on single fn !!!
       setTodos(prevTodos => {
-        const updatedTodo = response.data;
-        const todoIndex = prevTodos.findIndex(todo => todo.id === updatedTodo.id);
-        const prevTodosCopy = [...prevTodos];
-        prevTodosCopy.splice(todoIndex, 1, updatedTodo);
-        return prevTodosCopy;
+        return updateTodos(prevTodos, response.data);
       });
     } catch (err) {
       setTodos([]);

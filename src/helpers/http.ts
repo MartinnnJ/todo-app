@@ -1,4 +1,4 @@
-import Todo from "@/models/Todo";
+import Todo from "@models/Todo";
 import axios from "axios";
 
 const baseUrl = 'http://localhost:3000';

@@ -7,12 +7,12 @@
     },
     {
       "id": "8905681823344123",
-      "text": "Learn and practice React!",
+      "text": "Learn and practice React with Redux!",
       "isComplete": false
     },
     {
       "id": "04422112402359879",
-      "text": "TypeScript is better choice then Vanilla JavaScript",
+      "text": "TypeScript is better then Vanilla JavaScript",
       "isComplete": true
     },
     {

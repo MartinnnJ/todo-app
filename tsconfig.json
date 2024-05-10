@@ -9,6 +9,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
+      "@helpers/*": ["./src/helpers/*"],
+      "@models/*": ["./src/models/*"],
       "@components/*": ["./src/components/*"],
     },
 
